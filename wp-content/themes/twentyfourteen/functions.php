@@ -526,6 +526,8 @@ if ( ! class_exists( 'Featured_Content' ) && 'plugins.php' !== $GLOBALS['pagenow
 /********** Customizations **********
  **********                **********/
 
+require_once 'functions/biblio_search.php';
+
 function get_theme_image($filename, $echo = true) {
     if(!empty($filename)) {
         if($echo) {

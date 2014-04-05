@@ -1,29 +1,57 @@
 /* Florissant Stylesheet */
 
-body { background-color: #fff; /* #669933; */ }
+body { background-color: rgb(249,247,241) !important; }
+body.custom-background { background-color: rgb(249,247,241) !important; }
 
 a { color: #2f2f2f; }
 
-header { 
-    background-color: #2f2f2f; 
-    border-radius: 35px; 
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.3); 
-    margin: 2% auto; 
-    text-align: center; 
-    min-height: 133px;
-    padding: 1%;
-    position: relative;
-    z-index: 1;
+#eyebrow { background-color: #1f1f1f; height: 90px; }
+#eyebrow  h1 { color: #fff; }
+#eyebrow a.homelink:hover { text-decoration: none; }
+#eyebrow nav { margin-top: 5%; }
+#eyebrow nav ul li a { color: #fff; }
+
+.search-form-container { display: none; }
+.search-button { color: #fff; margin-top: 20%; }
+
+.search-form-container .search-button { margin-top: 2.5%; }
+
+#searchform { margin-top: 1%; }
+#searchform input[type="text"] {
+    height: 90%;
+    width: 90%;
+    font-size: 3em;
+    line-height: 1.8em;
+    border: none;
+    background-color: transparent;
 }
 
-header h1 { color: #fff; }
-header nav { color: #fff; width: 100%; margin: 0 auto; text-align: center; padding: 2% 0; }
-header nav ul { width: 90%; margin: 0 auto; float: none; text-align: center; }
-header nav ul li a { color: #fff; }
+.nav-pills li.active a,
+.nav-pills li a:hover,
+.nav-pills .current-menu-item a { background-color: #2f2f2f; } 
+
+header { background-color: #2f2f2f; text-align: center; min-height: 133px; padding: 2% 0; }
+header.entry-header { min-height: 1px; height: auto; }
+header .logo-container img { margin: 0 auto; float: none; }
 
 .panel-content p { padding: 2%; }
 
-article header { background: transparent; box-shadow: none; border-radius: 0px; text-align: left; margin: 0 auto; padding: 1% 0; }
+#main-content { 
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 2% 3%;
+    margin: 2% 0;
+}
+
+article header { background-color: transparent; text-align: left; margin: 0 auto; padding: 1% 0; }
 article header h1 { color: #2f2f2f; }
+
+.search-results section {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 2% 3%;
+    margin: 2% 0;
+}
+
+#biblio-form .row { margin: 1% 0; }
+

@@ -29,21 +29,75 @@
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
-	<?php wp_head(); ?>
+	<?php 
+        wp_head(); 
+
+        $site_url = site_url();
+
+        echo <<<EOHTML
+<script type="text/javascript">
+    siteurl = '{$site_url}';
+</script>
+
+EOHTML;
+
+    ?>
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site container">
+
+  <div id="eyebrow" class="container-fluid">
+      <div class="container">
+          <div class="row header-row">
+              <div class="col-sm-4 col-xs-10">
+                  <a class="homelink" href="<?php echo home_url(); ?>"><h1>Florissant Database</h1></a>
+              </div>
+              
+              <div class="visible-xs col-xs-2 text-left mobile-nav-toggle">
+                  <i class="fa fa-bars ba-2x mobile-menu" onclick="toggleMobileNav();"></i>
+              </div>
+
+              <div class="col-sm-6 hidden-xs">
+                  <nav role="navigation">
+				    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu nav nav-pills' ) ); ?>
+			      </nav>
+              </div>
+
+              <div class="col-sm-2 hidden-xs">
+                  <div class="text-right search-button">
+                      <i class="fa fa-search fa-2x" onclick="toggleSearchForm();"></i>
+                  </div>
+              </div>
+
+          </div>
+
+          <div class="row search-form-container">
+              <div class="container">
+                  <div class="col-sm-10">
+                      <form id="searchform" method="get" action="index.php" class="search">
+                          <input type="text" name="s" id="s" placeholder="type what you're looking for ....">
+                      </form>
+                  </div>
+
+                  <div class="col-sm-2 text-right search-button">
+                      <i class="fa fa-times fa-2x" onclick="toggleSearchForm();"></i>
+                  </div>
+              </div>
+          </div>
+
+
+      </div>
+  </div>
+
+  <div id="page" class="hfeed site container">
 
 	<header >
-      <h1>Florissant Database</h1>
 		<div class="header-main row">
-            <div class="col-sm-12 text-center;">
-			    <nav role="navigation">
-				    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu nav nav-pills' ) ); ?>
-			    </nav>
+            <div class="col-sm-12 text-center logo-container">
+                <img src="<?php get_theme_image('florissant_bg.jpg'); ?>" class="img-responsive">
             </div>
 		</div>
+
 	</header><!-- #masthead -->
 
 	<div id="main" class="site-main">
