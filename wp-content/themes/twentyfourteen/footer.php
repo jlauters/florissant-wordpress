@@ -21,11 +21,7 @@
 	</div><!-- #page -->
 
 		<footer id="colophon" class="site-footer container-fluid" role="contentinfo">
-            <div class="container"> 
-
-            
-            </div>
-
+            <div class="container"></div>
 		</footer><!-- #colophon -->
 
 	<?php wp_footer(); ?>

@@ -20,7 +20,7 @@
 <!--<![endif]-->
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
     <meta name="title" content="Florissant Database">
     <meta name="description" content="Florissant fossilized plant speciment database project website">
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
@@ -54,7 +54,7 @@ EOHTML;
               </div>
               
               <div class="visible-xs col-xs-2 text-left mobile-nav-toggle">
-                  <i class="fa fa-bars ba-2x mobile-menu" onclick="toggleMobileNav();"></i>
+                  <i class="fa fa-bars fa-2x mobile-menu" onclick="toggleMobileNav();"></i>
               </div>
 
               <div class="col-sm-6 hidden-xs">
